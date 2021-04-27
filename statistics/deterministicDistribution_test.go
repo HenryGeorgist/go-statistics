@@ -64,7 +64,7 @@ func TestDeterministicDistribution_CDFLessThanValue(t *testing.T) {
 	d, _ := InitDeterministic(val)
 	lesserValue := 0.4
 	var expected float64 = 0.0
-	got := d.PDF(lesserValue)
+	got := d.CDF(lesserValue)
 	if expected != got {
 		t.Errorf("d.PDF(notValue): %v; expected: %v", got, expected)
 	}
